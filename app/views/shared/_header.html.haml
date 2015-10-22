@@ -1,0 +1,28 @@
+%section#top-header.row
+  .col-md-2
+    %h1
+      = link_to "TDD Yelp"
+      /Search Field "Find tacos, pizzas, etc"
+      /Near with a default of the current users zip code, possibly implement the search to do plus or minus 25, 50, 100 of the zip code assuming that 12828 is 1 mile from 12929
+  /- if logged_in?
+  .col-md-3.clearfix
+    %ul
+      %li= link_to "Home"
+      %li= link_to "About Me"
+      %li= link_to "People"
+    /= form_tag search_videos_path, class: 'col-md-5 for-search', method: :get do
+    /= text_field_tag :title, params[:title], class: 'search-query', placeholder: "Search for videos"
+    /= submit_tag 'Search', class: 'btn btn-default', name: nil
+  #user_links.pull-right
+    %ul
+      %li.dropdown
+        %a(href="#" id="dlabel" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#")
+          /Welcome, #{current_user.name}
+          Welcome!
+          %b.caret
+        %ul.dropdown-menu(role="menu" aria-labelledby="dlabel")
+          %li
+            %a(href="#") Account
+            %a(href="#") Plan and Billing
+            /= link_to "Sign Out", sign_out_path
+

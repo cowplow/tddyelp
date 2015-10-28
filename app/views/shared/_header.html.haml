@@ -1,13 +1,15 @@
 %section#top-header.row
   .col-md-2
-    %h1
-      = link_to "TDD Yelp"
-      /Search Field "Find tacos, pizzas, etc"
-      /Near with a default of the current users zip code, possibly implement the search to do plus or minus 25, 50, 100 of the zip code assuming that 12828 is 1 mile from 12929
-  /- if logged_in?
+    %div#print-masthead
+      %a{ :href => '#'}
+        %img.print-bkg-image{ :src => 'http://s3-media2.fl.yelpcdn.com/assets/2/www/img/b7e9d647188d/gfx/header_print.gif', :alt => 'Yelp'}
+    %span#page-content.offscreen &nbsp;
   .row
-    .col-md-4.clearfix
-      = link_to "Search Field"
+    .col-md-8.clearfix
+      = form_tag root_path, class: 'for-search', method: :get do
+        = text_field_tag :find_desc, params[:find_desc], class: 'col-md-2 search-query', placeholder: "Find tacos, cheap dinner, Max's, etc", maxlength: 64
+        = text_field_tag :location, params[:location], class: 'col-md-2 search-query', placeholder: "Near 12828"
+        = submit_tag "Search", class: 'btn btn-default', name: nil
       .row
         .col-md-12.clearfix
           = link_to "Home"

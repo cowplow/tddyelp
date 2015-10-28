@@ -1,8 +1,55 @@
-%section.site_title
-  %h1
-    Unlimited Movies for Only 9.99 a Month.
-    /= link_to "Sign Up Now!", register_path
-  %p.sign_up
-  %p.sign_in
-    Have an account? Please
-    /= link_to "Sign In", sign_in_path
+.main-content-wrap.main-content--box
+	#super-container.content-container
+		#alert-container
+		.container.homepage
+			#page-header
+				#loc-bar.clearfix{ "data-component-bound" => 'true' }
+					%h1 
+						Yelp Fort Edward
+						%ul#other-cities-list
+							%li
+								= link_to "San Fransicso"
+							%li
+								= link_to "New York"
+							%li
+								= link_to "San Jose"
+							%li
+								= link_to "Los Angeles"
+							%li
+								= link_to "Chicago"
+							%li
+								= link_to "Palo Alto"
+							%li
+								= link_to "More Cities >>"
+			.clearfix.layout-block.layout-a.layout-border
+				.column.column-alpha.main
+					.ysection
+						.well
+							%h2.embossed-text-white
+								Yelp is the best way to find great local businesses
+							%p.embossed-text-white
+								People use Yelp to search for everything from the city's tastiest burger to the most renowned cardiologist. What will you uncover in your neighborhood?
+							= link_to "Create Your Free Account", '#', class: "btn btn-primary ytpe"
+					.ysection.clearfix.no-js-hidden#write-next-review
+						%h2 Your Review Awaits
+						%p Here are some suggestions to get you started
+						.content{ "data-latitude" => '43.2670175', "data-longitude" => '-73.5845597', "data-more-suggestions" => 'true', "data-component-bound" => 'true' }
+							.main-container.review-widget.review-widget--decorated
+								%ul.suggestions
+									%li.first.suggestion-item.location{ "data-business-id" => "First Busniess ID", "data-suggestion-type" => 'location', "data-component-bound" => 'true' }
+										.suggestion-container
+											.all-contents
+												.photo-box.pb-60s
+													%a{ :href => '#' }
+														%img.photo-box-img{ :alt => 'Morgan & Company', :height => '60', :src => '//s3-media2.fl.yelpcdn.com/bphoto/vbEmSwwNBjQlsB4uDSsoJA/60s.jpg', :width => '60' }
+												.suggestion-content.ieSucks
+									%li.suggestion-item.location{ "data-business-id" => "Second Busniess ID", "data-suggestion-type" => 'location', "data-component-bound" => 'true' }
+									%li.suggestion-item.location{ "data-business-id" => "Third Busniess ID", "data-suggestion-type" => 'location', "data-component-bound" => 'true' }
+								.review-nav{ "data-component-bound" => 'true' }
+								= link_to "Read our review guidlines", '#', "data-component-bound" => 'true'
+					.ysection.clearfix#best-of-yelp-module
+					.ysection.clearfix#activity-feed{ "data-component-bound" => 'true' }
+					#compliment-input-boxes{ :style => 'display: none' }
+					.eight-col
+					%ul#yelp-three-column-pitch.clearfix
+				.column.column-beta.sidebar

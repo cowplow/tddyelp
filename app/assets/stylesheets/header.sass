@@ -4,28 +4,43 @@ section#top-header
   margin-bottom: 20px
   padding: 12px 0
   border-radius: 5px
+  .col-md-2
+    #print-masthead
+      > a
+        > img
+          vertical-align: middle
+          margin-left: 100px
+    .offscreen
+      clip: rect(0 0 0 0)
+      position: absolute
+      left: -9999px
+      top: auto
+      overflow: hidden
+        x: hidden
+        y: hidden
+      width: 1px
+      height: 1px
   a
     color: white
-  h1
-    font-size: 20px
+
   .row  
-    .col-md-4.clearfix
-      padding-top: 0px
-      a
-        float: left
-        margin-right: 20px
-        text-transform: uppercase
-        &:first-of-type
-          margin-left: -15px
-  form
-    padding-top: 6px
-    margin: 0
-    input[type="text"]
-      width: 320px
-      float: left
-    input[type="submit"]
-      margin-left: 10px
-      float: left
+    .col-md-8.clearfix
+      padding-top: 6px
+      form
+        input[type="text"]
+          width: 320px
+          float: left
+          margin-right: 10px
+        input[type="submit"]
+          height: 24px
+          margin-left: 10px
+          float: left
+      .row
+        .col-md-12.clearfix
+          > a
+            margin-right: 20px
+            float: left
+            font-weight: bold
   #user_links
     padding-top: 20px
     > ul
@@ -34,6 +49,7 @@ section#top-header
         width: 200px
         a
           margin: 0 10px
+          font-weight: bold
           b
             border-top-color: white
         > ul
@@ -43,3 +59,4 @@ section#top-header
             a
               color: #6666FF
               margin: 0
+              font-weight: bold
